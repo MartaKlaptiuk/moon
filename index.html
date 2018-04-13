@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Galaxy</title>
+	<link rel="stylesheet" type="text/css" href="css/1140.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	<script src="deploy/js.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+</head>
+
+<body>
+	<div id="bg">
+		<div class="container16">
+			<!-- Navigation menu -->
+			
+		    <div class="menu">
+		    <div class="menu__icon">
+		      <span></span>
+		      <span></span>
+		      <span></span>
+		      <span></span>
+		    </div>
+		  
+		    <div class="menu__links">
+		        <a class="menu__links-item" href="/">Item 1</a>
+		        <a class="menu__links-item" href="/">Item 2</a>
+		    </div>
+		</div>
+
+			<ul id="scene">
+				<li class="layer" id="moon" data-depth="0.20"><img src="img/moon.png"></li>
+				<li class="layer" id="l1" data-depth="0.40"><img src="img/stars2.png"></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<!-- Scripts -->
+	
+	<script>
+	// Pretty simple huh?
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+	</script>
+
+</body>
+</html>
