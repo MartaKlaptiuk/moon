@@ -12,13 +12,13 @@
   crossorigin="anonymous"></script>
 	<script src="deploy/js.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	<div id="bg">
 		<div class="container16">
 			<!-- Navigation menu -->
-			
 		    <div class="menu">
 		    <div class="menu__icon">
 		      <span></span>
@@ -26,13 +26,13 @@
 		      <span></span>
 		      <span></span>
 		    </div>
-		  
-		    <div class="menu__links">
-		        <a class="menu__links-item" href="/">Item 1</a>
-		        <a class="menu__links-item" href="/">Item 2</a>
-		    </div>
+		    <nav>
+		        <a class="menu__links-item " href="#">Item 1</a>
+		        <a class="menu__links-item" href="#">Item 2</a>
+		        <a class="menu__links-item" href="#">Item 3</a>
+		        <a class="menu__links-item" href="#">Item 4</a>
+		    </nav>
 		</div>
-
 			<ul id="scene">
 				<li class="layer" id="moon" data-depth="0.20"><img src="img/moon.png"></li>
 				<li class="layer" id="l1" data-depth="0.40"><img src="img/stars2.png"></li>
@@ -40,6 +40,25 @@
 		</div>
 	</div>
 
+	<div id="section-about">
+		<div class="img-about" ><img src="img/galax.png"></div>
+		<div class="text-about">
+			<p class="tagline">About us</p>
+			<h2>Something about our command</h2>
+			<div class="main-about">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+				<div class="planet-earth">
+					<img src="img/planet-trans-earth.png">
+				</div>
+			</div>
+		</div>
+	</div>
+<section class="parallax">
+	<div class="parallax-inner">
+		
+	</div>
+</section>
+	
 
 	<!-- Scripts -->
 	
@@ -47,6 +66,7 @@
 	// Pretty simple huh?
 	var scene = document.getElementById('scene');
 	var parallax = new Parallax(scene);
+
 	</script>
 
 </body>
