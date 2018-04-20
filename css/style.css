@@ -139,7 +139,7 @@ nav a:hover::after {
   }
 }
 
-#section-about{
+/*#section-about{
   background-color: black;
   width: 100%;
   height: 100vh;
@@ -174,7 +174,7 @@ display: block;
     padding-top: 50px;
 }
 
-.parallax{
+.parallax-cont-3{
   background: url(../img/sky.jpg) no-repeat fixed center;
 }
 .parallax-inner{
@@ -184,6 +184,67 @@ display: block;
 .planet-earth img{
   width: 300px;
   margin-left: 450px;
+}*/
+
+.content {
+  background: black;
+  height: 100vh;
 }
 
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  top: 200px;
+}
 
+.box {
+  will-change: transform;
+}
+.box >.galax {
+  width: 50%;
+}
+.text-about{
+  margin: 100px 0 0 50px;
+  color: white;
+  width: 50%;
+}
+.box > p{
+  letter-spacing: 2px;
+  font-size: 18px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+}
+.box > p:last-child{
+  padding-top: 50px;
+}
+h2{
+  font: 3.5em/1.2em 'MillerD';
+  /*padding-top: 60px;*/
+}
+.planet-earth{
+  position: absolute;
+  top: 1200px;
+  opacity: 0.8;
+}
+
+.parallax-cont-3{
+  background: url(../img/sky.jpg) no-repeat fixed center;
+}
+.parallax-inner{
+  width: 450px;
+}
+.parallax-inner h2{
+  display: flex;
+  justify-content: center;
+  color: red;
+}
