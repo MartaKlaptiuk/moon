@@ -218,6 +218,7 @@ h2{
 }
 
 .parallax-cont-3{
+  height: 75vh;
   background: url(../img/sky.jpg) no-repeat fixed center;
 }
 .parallax-inner{
@@ -225,8 +226,9 @@ h2{
 /*  overflow:hidden; */
 }
 .parallax-inner h2{
+  padding-top: 60px;
   text-align: center;
-  color: red;
+  color: #93889a;
 }
 #skills{
   width: 80%;
@@ -295,13 +297,15 @@ margin: 20px 50px;
   height: 60vh;
   height: 100%;
   text-align: center;
-  color: white;
+  color: #4CDEF5;
 }
 #team h2{
   margin: 90px;
+  color: #FFE4E1;
 }
 #team h3{
   padding: 20px ;
+  color: #a4708e;
 }
 .team-photo{
   width: 90%;
@@ -360,7 +364,7 @@ form .field label + span {
   top: 12px;
   left: 2%;
   font-size: 2.5em;
-  text-shadow: 1px 2px 0 #cd6302;
+  text-shadow: 1px 2px 0 #a4708e;
   -webkit-transition: all 333ms ease-in-out;
   -moz-transition: all 333ms ease-in-out;
   -o-transition: all 333ms ease-in-out;
@@ -404,20 +408,20 @@ form .field input[type="text"]:focus + label, form .field input[type="text"].foc
 form .field textarea:focus + label,
 form .field textarea.focused + label {
   width: 18%;
-  background: #FD9638;
-  color: #313A3D;
+  background: #93889a;
+  color: #faf3e3;
 }
 form .field input[type="text"].focused + label,
 form .field textarea.focused + label {
-  color: #FD9638;
+  color: #93889a;
 }
 form .field:hover label {
   width: 18%;
   background: #313A3D;
-  color: white;
+  color: #faf3e3;
 }
 form input[type="submit"] {
-  background: #FD9638;
+  background: #93889a;
   color: white;
   -webkit-appearance: none;
   border: none;
@@ -436,7 +440,7 @@ form input[type="submit"] {
 }
 form input[type="submit"]:hover {
   background: #313A3D;
-  color: #FD9638;
+  color: #93889a;
 }
 form input[type="submit"]:focus {
   outline: none;
@@ -598,9 +602,20 @@ width: 70%;
 }
 .contact-form{
   margin-top: 150px;
+  width: 100%;
 }
 form .field label + span {
-  font-size: 1.5em;
+  font-size: 1.7em;
+}
+form .field input[type="text"], form .field textarea{
+  padding-left: 25%;
+}
+form .field label{
+  padding-right: 20px;
+}
+form{
+  width: 85%;
+  margin-left: 5%;
 }
 footer {
 flex-direction: column;
