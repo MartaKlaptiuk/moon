@@ -10,9 +10,15 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-	<script src="deploy/js.js" defer></script>
+  <!-- <link rel='stylesheet' href='bootstrap.min.css' type='text/css' media='all'> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<!-- Animate -->
+<link rel="stylesheet" media="all" href="css/animate.css">
+<script src="deploy/wow.min.js"></script>
+<script>new WOW().init();</script>
+<!-- Animate end-->
+<script type="text/javascript" src='deploy/jquery-ui.min.js'></script>
 </head>
 
 <body>
@@ -26,7 +32,7 @@
 		      <span></span>
 		      <span></span>
 		    </div>
-		    <nav>
+		    <nav class="fadeInDown wow">
 		        <a class="menu__links-item " href="#">Item 1</a>
 		        <a class="menu__links-item" href="#">Item 2</a>
 		        <a class="menu__links-item" href="#">Item 3</a>
@@ -39,50 +45,105 @@
 			</ul>
 		</div>
 	</div>
-
-	<!-- <div id="section-about">
-		<div class="img-about" ><img src="img/galax.png"></div>
-		<div class="text-about">
-			<p class="tagline">About us</p>
-			<h2>Something about our command</h2>
-			<div class="main-about">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-				<div class="planet-earth">
-					<img src="img/planet-trans-earth.png">
-				</div>
-			</div>
-		</div>
-	</div>
-<section class="parallax-cont-3">
-	<div class="parallax-inner">
-		
-	</div>
-</section> -->
+<!-- About -->
 <div class="content">
-  <div class="wrapper">
+  <div class="wrapper ">
     <div class="box galax" data-scroll-speed="2.5"><img src="img/galax.png"></div>
     <div class="text-about">
     	<div class="box" data-scroll-speed="1"><img class="planet-earth" src="img/planet-trans-earth.png"></div>
-    	<div class="box" data-scroll-speed="3"><p>About us</p></div>
-    	<div class="box" data-scroll-speed="4"><h2>Something about our command</h2></div>
-    	<div class="box" data-scroll-speed="5"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p></div>
+    	<div class="box" data-scroll-speed="3"><p class="fadeInDown wow">About us</p></div>
+    	<div class="box" data-scroll-speed="4"><h2 class="fadeInDown wow">Something about our command</h2></div>
+    	<div class="box" data-scroll-speed="5"><p class="fadeInDown wow"> I love crafting beautiful web pages in HTML5, CSS3 and JavaScript or jQuery. My other skills include WordPress, Photoshop, Illustrator. You can grab my CV in English or Czech version. If you want to hire me or just to talk, connect with me., I'm interested in design, performance & the future of the web</p></div>
     </div>
   </div>
 </div>	
+<!-- Technologies -->
 <section class="parallax-cont-3">
 	<div class="parallax-inner">
-		<img data-scroll-speed="8" src="img/sun.png">
-		<h2>What we use</h2>
+		<!-- <img data-scroll-speed="2" src="img/sun.png"> -->
+		<h2 class="fadeInDown wow">What we use</h2>
+		<div id="skills">
+			<div><img class="fadeInLeft wow" src="img/html_css_js.png" ></div>
+			<div><img class="fadeInLeft wow" src="img/bootstrap.png" ></div>
+			<div><img class="fadeInDown wow" src="img/jquery.png" ></div>
+			<div><img class="fadeInRight wow" src="img/sass.png" ></div>
+			<div><img class="fadeInRight wow" src="img/react.png" ></div>
+			<div><img class="fadeInLeft wow" src="img/node.png"></div>
+			<div><img class="fadeInLeft wow" src="img/wordpress.png"></div>
+			<div><img class="fadeInUp wow" src="img/joomla.png"></div>
+		</div>
 	</div>
 </section>
+<!-- Previous work -->
+	<h1 class="prev-work fadeInDown wow">PREVIOUS WORK</h1>
+	<div class="con">
+	  <img src="http://i59.tinypic.com/21np5rd.jpg" class="imageOne" />
+	  <div class="coverImage"></div>
+	  <div class="handle"></div>
+	</div>
+
+	<div id="team">
+		<h2 class="fadeInDown wow">OUR AMAZING TEAM</h2>
+		<div class="team-photo">
+			<figure><img src="img/men.png"><figcaption><h3 class="fadeInDown wow">Marta</h3><p class="fadeInDown wow">Lead design</p></figcaption></figure>
+			<figure><img src="img/men.png"><figcaption><h3 class="fadeInDown wow">Tusya</h3><p class="fadeInDown wow">Lead marketer</p></figcaption></figure>
+			<figure><img src="img/men.png"><figcaption><h3 class="fadeInDown wow">Martella</h3><p class="fadeInDown wow">Lead developer</p></figcaption></figure>
+		</div>
+	</div>
+<!-- Contact form -->
+	<section id="hire" class="contact-form">
+    <h1 class="fadeInDown wow">Contact Me</h1>
+    
+    <form>
+	      <div class="field name-box">
+		        <input type="text" id="name" placeholder="Who Are You?"/>
+        		<label for="name">Name</label>
+		        <span class="ss-icon">check</span>
+	      </div>
+
+	      <div class="field email-box">
+		        <input type="text" id="email" placeholder="name@email.com"/>
+		        <label for="email">Email</label>
+		        <span class="ss-icon">check</span>
+	      </div>
+
+	      <div class="field msg-box">
+		        <textarea id="msg" rows="4" placeholder="Your message goes here..."/></textarea>
+		        <label for="msg">Msg</label>
+		        <span class="ss-icon">check</span>
+	      </div>
+
+	      <input class="button" type="submit" value="Send" />
+  </form>
+</section>
+<!-- Footer -->
+	<footer>
+		<div class="location">
+			<h4 class="_16">Location</h4>
+			<p>Lviv, Ukraine</p>
+		</div>
+		<div class="footer-social-icons">
+		    <h4 class="_16">Follow us on</h4>
+		    <ul class="social-icons">
+		    	<li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+		    	<li><a href="" class="social-icon"> <i class="fa fa-github"></i></a></li>
+		        <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+		        <li><a href="" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
+		        <li><a href="" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+		    </ul>
+		</div>
+		<div class="contact-info">
+		    <h4 class="_16">Contact info</h4>
+		    <a href="mailto:tusyvfhnf@gmail.com" alt="My E-mail ID" 
+               title="My E-mail">
+               <i class="fa fa-fw fa-envelope"><span>tusyvfhnf@gmail.com</span></i>
+            </a>
+			<p>Made with <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/love_copy.png" /> by <a href='#' target='_blank'> Marta Klaptiuk </a></p>
+		</div>
+	</footer>
 	<!-- Scripts -->
 	
-	<script>
-	// Pretty simple huh?
-	var scene = document.getElementById('scene');
-	var parallax = new Parallax(scene);
 
-	</script>
-
+<script src="deploy/js.js" ></script>
 </body>
 </html>
