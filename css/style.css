@@ -4,21 +4,20 @@ body{
   font-family: 'Raleway', sans-serif;
 }
 #bg{
-	background: #000 url(../img/sky.jpg) no-repeat top center;
-	-webkit-background-size: cover;
+  background: #000 url(../img/sky.jpg) no-repeat top center;
+  -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover; 
-        height: 100vh; 
+        height: 100vh !important; 
+        height: 100%;
         background-attachment: fixed;   
 }
 #moon{
 width: 70%;
-height: 70%;
-/*margin: 3% auto;
-z-index: 2;*/
+/*z-index: 2;*/
 display: flex;
-margin:auto
+margin: 0 auto;
 }
 
 #l1 img{
@@ -48,7 +47,7 @@ opacity: 0.3;
 }
 
 .menu__icon span:nth-child(1) {
-  top: 0px;
+  top: 0;
 }
 
 .menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
@@ -60,9 +59,14 @@ opacity: 0.3;
  }
 nav{
   margin: 4em auto;
-	display: flex;
-	justify-content: center;
-	
+  display: flex;
+  justify-content: center;
+}
+.logo{
+  width: 50px;
+  position: absolute;
+  top: 2em;
+  left: 3em;
 }
 .menu__links-item {
     display: inline-block;
@@ -77,7 +81,20 @@ nav{
   overflow: hidden;
   padding: 0 20px 0 20px;
 }
-
+.learn-more {
+position: absolute;
+bottom: 20px;
+left: 50%;
+margin-left: -100px;
+}
+.learn-more a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+}
+.learn-more i{
+display: flex;
+justify-content: center;
+}
 /*hover-effect start*/
 nav a:hover {
   color: lightgrey;
@@ -117,12 +134,7 @@ nav a:hover::after {
 .menu.menu_state_open nav {
   display: block;  
 }
-
 @media screen and (max-width: 999px) {
-#moon{
-width: 90%;
-height: 90%;
-}
 .text-about{
   width: 100% !important; 
 }
@@ -131,7 +143,7 @@ height: 90%;
 }
   .menu__icon{
     display: inline-block;
-    margin: 20px -60px; 
+    margin: 20px; 
   }
   nav {
     position: fixed;
@@ -151,18 +163,8 @@ height: 90%;
     color: #ffffff;
   }
 }
-@media screen and (max-width: 920px){
-#moon{
-/*width: 60%;
-height: 60%;*/
-/*margin-top: -100px;*/
-}
-}
-@media screen and (min-width: 1116px){
-/*#moon{
-margin-top: -100px !important;
-}*/
-}
+
+
 
 .content {
   background: black;
@@ -178,7 +180,7 @@ margin-top: -100px !important;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
-  display: flex;
+  display: inline-flex;
   height: 100vh;
   width: 100%;
   position: relative;
@@ -218,8 +220,11 @@ h2{
 }
 
 .parallax-cont-3{
-  height: 75vh;
   background: url(../img/sky.jpg) no-repeat fixed center;
+    -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; 
 }
 .parallax-inner{
   height: 100%;
@@ -242,56 +247,219 @@ width: 200px;
 margin: 20px 50px;
 }
 /*image draggable start*/
-.prev-work{
-  margin: 20px 0;
+/*.slider-wrapper h1{
   text-align: center;
-}
-.con {
-  background: url(../img/nebula-transparent-4.png) repeat center;
-  width: 562px;
-  height: 300px;
-  border: 2px solid ;
+  color: white;
+  padding-top: 40px;
+}*/
+.slider-wrapper {
+  width: 100%;
+  height: 80vh;
   position: relative;
-  margin: auto;
-  top: 40px;
+  background: #000 url(../img/nebula-transparent-4.png) repeat fixed center;
 }
-.con img {
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-}
-.coverImage {
-  position: absolute;
-  background: url("http://i60.tinypic.com/210hgjp.jpg");
-  background-size: auto 100%;
-  width: 50%;
-  height: 100%;
-}
-.handle {
-  width: 0px;
-  height: 100%;
-  border-left: 12px solid #fff;
-  position: absolute;
-  left: 50%;
-}
-.handle:after {
-  content: "DRAG";
+
+.before-wrapper {
   display: block;
-  width: 60px;
-  height: 60px;
-  border: 2px solid #eee;
-  border-radius: 50%;
-  color: #999;
-  line-height: 60px;
-  font-weight: 300;
-  text-align: center;
-  background: #fff;
+  overflow: hidden;
+  width: auto;
+  height: 100%;
+  position: relative;
+  background: url(../img/planet-transparent.png) no-repeat center;
+  background-size: 30%;
+}
+
+.before-wrapper:before {
+  display: block;
+  content: '';
+  width: 100%; 
+  height:100%;
+}
+
+.after-wrapper {
+  overflow: hidden;
   position: absolute;
-  left: -36px; top: 0; bottom: 0;
-  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.after-image {
+  display: block;
+  width: auto;
+  height: 100%;
+  position: relative;
+-webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: url(../img/planet-trans-jupiter.png) no-repeat center;
+  background-size: 30%;
 }
 /*image draggable end*/
 
+/*Examples of work start*/
+/*.examplesOfWork{
+background: url(../img/sky.jpg) no-repeat fixed center;
+-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; 
+height: 40vh;
+color: #4CDEF5;
+}
+.examplesOfWork{
+padding-top: 60px;
+text-align: center;
+color: #93889a;
+}
+.flex-img{
+  height: 70%;
+  display: flex;
+  justify-content: center;
+}
+.flex-img img{
+height: 100%; 
+margin: 30px ;
+}*/
+.gallery {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  background: url(../img/sky.jpg) no-repeat fixed center;
+-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; 
+}
+.gallery h2{
+  color: #93889a;
+}
+.gallery li {
+  width: 330px;
+  max-width: 33%;
+  min-height: 100%;
+  text-align: center;
+  height: 255px;
+  position: relative;
+  margin: 0 auto;
+  display: inline-block;
+  overflow: hidden;
+  background-color: black;
+}
+.gallery li:nth-child(2) img {
+  margin: 0;
+  display: inline-block;
+  float: right;
+}
+.gallery li .name {
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: rgba(0, 0, 0, 0.7) 1px 1px 5px;
+  color: white;
+  font-weight: lighter;
+  font-size: 20px;
+  letter-spacing: .1em;
+  position: absolute;
+  display: block;
+  top: 40%;
+  left: 0;
+  text-align: center;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+.gallery li .name .title {
+  display: block;
+  text-transform: none;
+  font-style: italic;
+  font-size: 80%;
+  color: rgba(255, 255, 255, 0.7);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+  -moz-transition-duration: 0.9s;
+  -o-transition-duration: 0.9s;
+  -webkit-transition-duration: 0.9s;
+  transition-duration: 0.9s;
+}
+.gallery li:hover .name {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+}
+.gallery li:hover .title {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+.gallery li:hover img {
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  background-position: top top;
+  -webkit-filter: grayscale(0.4) blur(2px);
+  filter: grayscale(0.4) blur(2px);
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  -webkit-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+}
+.gallery li:hover:hover img {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+.gallery li img {
+  display: block;
+  width: 421px;
+  height: 255px;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: center;
+  -moz-transform: scale(1.09, 1.09);
+  -ms-transform: scale(1.09, 1.09);
+  -webkit-transform: scale(1.09, 1.09);
+  transform: scale(1.09, 1.09);
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.gallery li:nth-child(3) img{
+  width: 421px;
+  height: 215px;
+  margin: 25px auto;
+}
+/*Examples of work end*/
 #team{
   background: #000 url(../img/nebula-transparent.png) repeat fixed center;
   height: 60vh;
@@ -300,7 +468,7 @@ margin: 20px 50px;
   color: #4CDEF5;
 }
 #team h2{
-  margin: 90px;
+  padding-top: 50px;
   color: #FFE4E1;
 }
 #team h3{
@@ -587,12 +755,90 @@ text-align: center;
  margin: 40px 15px 15px 0;
  text-align: right;
 }
+
+
+@media only screen and (max-width: 767px){
+.container12, .container16 {
+    width: 100%;
+}
+}
+
+@media screen and (max-width: 999px) {
+/*#moon{
+width: 90%;
+height: 90%;
+}*/
+.text-about{
+  width: 100% !important; 
+}
+.galax {
+  display: none;
+}
+  .menu__icon{
+    display: inline-block;
+    margin: 20px; 
+  }
+  nav {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin-top: 57px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow: auto;
+  }
+  .menu__links-item {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+}
+@media screen and (min-width: 1000px) and (max-width: 1678px){
+#moon{
+margin-top: -50px;
+width: 60%;
+}
+}
 @media screen and (max-width: 1024px){
+/*  #moon{
+width: 100%;
+margin-top: 100px;
+}*/
+/*.planet-earth{
+  top: 300px;
+}*/
+
+.before-wrapper {
+  background-size: 70%;
+}
+.after-image {
+  background-size: 70%;
+}
   #skills{
-  width: 50%;
+  width: 40%;
 }
 #skills img{
 width: 70%;
+margin: 20px;
+}
+/*draggable image*/
+.slider-wrapper {
+  height: 70vh;
+}
+.examplesOfWork{
+height: 100%;
+}
+.flex-img{
+  flex-direction: column;
+  align-items: center;
+}
+.flex-img img{
+  width: 50%;
+height: 50%; 
+margin: 30px ;
 }
 .team-photo {
   flex-direction: column;
