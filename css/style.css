@@ -19,7 +19,6 @@ width: 70%;
 display: flex;
 margin: 0 auto;
 }
-
 #l1 img{
 opacity: 0.3;
 }
@@ -157,6 +156,8 @@ nav a:hover::after {
     overflow: auto;
   }
   .menu__links-item {
+    width: 20%;
+    margin: 0 auto;
     display: block;
     padding: 10px 0;
     text-align: center;
@@ -492,11 +493,16 @@ margin: 30px ;
   padding-top: 20px;
 }
 .contact-form h1 {
-  margin-bottom: 40px;
+  padding-top: 30px;
+  margin-bottom: 30px;
   font-size: 4em;
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
   font-weight: 100;
+}
+.contact-form p{
+  padding-bottom: 20px;
+  font-size: 1.5rem;
 }
 form {
   width: 58.3333333333%;
@@ -605,6 +611,7 @@ form input[type="submit"] {
   -o-transition: all 333ms ease-in-out;
   -ms-transition: all 333ms ease-in-out;
   transition: all 333ms ease-in-out;
+  cursor: pointer;
 }
 form input[type="submit"]:hover {
   background: #313A3D;
@@ -614,6 +621,7 @@ form input[type="submit"]:focus {
   outline: none;
   background: #cd6302;
 }
+
 /*Contact form end*/
 
 /*Footer*/
@@ -796,10 +804,16 @@ height: 90%;
     color: #ffffff;
   }
 }
+
 @media screen and (min-width: 1000px) and (max-width: 1678px){
 #moon{
 margin-top: -50px;
 width: 60%;
+}
+}
+@media screen and (min-width: 704px) and (max-width: 1024px){
+.slider-wrapper {
+  height: 70vh;
 }
 }
 @media screen and (max-width: 1024px){
@@ -845,6 +859,12 @@ margin: 30px ;
 }
 .wrapper{
   top: 5px;
+}
+.gallery li {
+  display: flex;
+  flex-direction: column;
+align-items: center;
+
 }
 .contact-form{
   margin-top: 150px;
