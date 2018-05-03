@@ -156,11 +156,8 @@ nav a:hover::after {
     overflow: auto;
   }
   .menu__links-item {
-<<<<<<< HEAD
     width: 25%;
-=======
     width: 20%;
->>>>>>> master
     margin: 0 auto;
     display: block;
     padding: 10px 0;
@@ -868,7 +865,11 @@ margin: 30px ;
   display: flex;
   flex-direction: column;
 align-items: center;
+<<<<<<<<< Temporary merge branch 1
+=========
 max-width: 68%;
+>>>>>>>>> Temporary merge branch 2
+
 }
 .contact-form{
   margin-top: 150px;
