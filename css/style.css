@@ -3,6 +3,67 @@
 body{
   font-family: 'Raleway', sans-serif;
 }
+/*Preloader start*/
+.loaderArea {
+  background: linear-gradient(90deg, #101A2A 10%, #0F2241 90%);
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right:0;
+  bottom:0;
+  z-index: 100000;
+}
+.loader {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 50%;
+  margin-left: -20px;
+  top: 50%;
+  margin-top: -20px;
+}
+ 
+.loader:before,
+.loader:after {
+  content: "";
+  height: 40px;
+  width: 40px;
+  border: 8px solid rgba(255,255,255,.5);
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+}
+ 
+.loader:before {
+  animation: animate 2s infinite linear;
+}
+ 
+@keyframes animate {
+  0% {
+    transform: rotate(0) skew(0);
+  }
+   
+  100% {
+    transform: rotate(180deg) skew(360deg);
+  }
+}
+ 
+ 
+.loader:after {
+  animation: animate2 2s infinite linear;
+}
+ 
+@keyframes animate2 {
+  0% {
+    transform: rotate(0) skew(0);
+  }
+   
+  100% {
+    transform: rotate(-180deg) skew(-360deg);
+  }
+}
+/*Preloader end*/
 #bg{
   background: #000 url(../img/sky.jpg) no-repeat top center;
   -webkit-background-size: cover;
@@ -19,9 +80,26 @@ width: 70%;
 display: flex;
 margin: 0 auto;
 }
+.brand-text{
+    position: absolute;
+    color: #101A2A;
+    left: 28%;
+    top: 35%;
+    font-weight: bold;
+    z-index: 20;
+}
+.intro-text{
+  margin: 0 auto;
+}
+.brand-heading {
+  font-size: 100px;
+  font-weight: 700;
+  text-align: left;
+}
 #l1 img{
 opacity: 0.3;
 }
+
 .menu {
  text-align: right;
 }
@@ -236,6 +314,19 @@ h2{
   padding-top: 60px;
   text-align: center;
   color: #93889a;
+}
+#toTop {
+width:60px;
+padding:5px;
+position:fixed;
+bottom:10px; /* отступ кнопки от нижнего края страницы*/
+right:10px;
+cursor:pointer;
+display:none;
+}
+#toTop img{
+width: 46px;
+height: 136px;
 }
 #skills{
   width: 80%;
@@ -770,13 +861,28 @@ text-align: center;
 .container12, .container16 {
     width: 100%;
 }
+  .brand-text{
+    color: white;
+    left: 7%;
+    top: 100%;
 }
-
+.brand-heading {
+  font-size: 80px;
+}
+}
+@media screen and (max-width: 1024px) and (max-height: 1366px ){
+ #bg{ 
+  height: 50vh; 
+  height: 100%;  
+} 
+.learn-more{
+  display: none;
+}
+.content {
+  height: 60vh;
+}
+}
 @media screen and (max-width: 999px) {
-/*#moon{
-width: 90%;
-height: 90%;
-}*/
 .text-about{
   width: 100% !important; 
 }
@@ -817,15 +923,8 @@ width: 60%;
   height: 70vh;
 }
 }
-@media screen and (max-width: 1024px){
-/*  #moon{
-width: 100%;
-margin-top: 100px;
-}*/
-/*.planet-earth{
-  top: 300px;
-}*/
 
+@media screen and (max-width: 1024px){
 .before-wrapper {
   background-size: 70%;
 }
@@ -864,12 +963,8 @@ margin: 30px ;
 .gallery li {
   display: flex;
   flex-direction: column;
-align-items: center;
-<<<<<<<<< Temporary merge branch 1
-=========
-max-width: 68%;
->>>>>>>>> Temporary merge branch 2
-
+  align-items: center;
+  max-width: 68%;
 }
 .contact-form{
   margin-top: 150px;

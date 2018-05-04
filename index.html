@@ -22,8 +22,13 @@
 </head>
 
 <body>
+	<div class="loaderArea">
+	   <div class="loader"></div>
+	</div>
+
 	<div id="bg">
-		<a href=""><img class="logo fadeInDown wow" src="img/m-logo.png"></a> 
+
+			<a href=""><img class="logo fadeInDown wow" src="img/m-logo.png"></a> 
 		<div class="container16">
 			<!-- Navigation menu -->
 		    <div class="menu">
@@ -34,16 +39,25 @@
 		      <span></span>
 		    </div>
 		    <nav class="fadeInDown wow">
-		        <a class="menu__links-item " href="#">Home</a>
-		        <a class="menu__links-item" href="#">About</a>
-		        <a class="menu__links-item" href="#">What we use</a>
-		        <a class="menu__links-item" href="#">Work</a>
-		        <a class="menu__links-item" href="#">Team</a>
-		        <a class="menu__links-item" href="#">Contact</a>
+		        <!-- <a class="menu__links-item " href="#bg">Home</a> -->
+		        <a class="menu__links-item" href="#firstSection">About</a>
+		        <a class="menu__links-item" href="#what-we-use">What we use</a>
+		        <a class="menu__links-item" href="#examples-of-work">Work</a>
+		        <a class="menu__links-item" href="#team">Team</a>
+		        <a class="menu__links-item" href="#hire">Contact</a>
 		    </nav>
 		</div>
 			<ul id="scene">
-				<li class="layer" id="moon" data-depth="0.20"><img src="img/moon.png"></li>
+				<li class="layer" id="moon" data-depth="0.20"><img src="img/moon.png"><div class="brand-text">
+					<div class="brand-heading">
+						<span class="txt-rotate" data-period="100" data-rotate='[ "Привіт,", "Hello,", "Salut,", "Hallo,", "Ciao,", "Hola,", "Hej,", "Olá," ]'></span>
+					</div>
+					<!-- end typer hello -->
+					<p class="intro-text">my name is Marta Klaptiuk.
+					<br> I'm a <span class="fa fa-code" aria-hidden="true"></span> <span class="intro-text-hgl">front-end developer</span> <span class="fa fa-code" aria-hidden="true"></span>
+						<br>based in the beautiful city of Lviv, Ukraine.</p>
+					</div>
+				</li>
 				<li class="layer" id="l1" data-depth="0.40"><img src="img/stars2.png"></li>
 			</ul>
 			
@@ -66,9 +80,10 @@
     	<div class="box" data-scroll-speed="5"><p class="fadeInDown wow"> I love crafting beautiful web pages in HTML5, CSS3 and JavaScript or jQuery. My other skills include WordPress, Photoshop, Illustrator. You can grab my CV in English or Czech version. If you want to hire me or just to talk, connect with me., I'm interested in design, performance & the future of the web</p></div>
     </div>
   </div>
+
 </div>	
 <!-- Technologies -->
-<section class="parallax-cont-3">
+<section class="parallax-cont-3" id="what-we-use">
 	<div class="parallax-inner">
 		<!-- <img data-scroll-speed="2" src="img/sun.png"> -->
 		<h2 class="fadeInDown wow">What we use</h2>
@@ -81,6 +96,7 @@
 			<div><img class="fadeInLeft wow" src="img/node.png"></div>
 			<div><img class="fadeInLeft wow" src="img/wordpress.png"></div>
 			<div><img class="fadeInUp wow" src="img/joomla.png"></div>
+			<div><img class="fadeInUp wow" src="img/webpack.png"></div>
 		</div>
 	</div>
 </section>
@@ -95,17 +111,7 @@
 		  <div class="comparison-slider"></div>
 		</div>
 
-<!-- Examples of work -->
-		<!-- <div class="examplesOfWork">
-			<h2 class="fadeInDown wow">EXAMPLES OF WORK</h2>
-			<div class="flex-img">
-				<img src="img/LembergGraf.jpg">
-				<img src="img/m-logo.svg">
-				<img src="img/amichi.png">
-				
-			</div>
-		</div> -->
-		<ul class="gallery">
+		<ul class="gallery" id="examples-of-work">
 		 <h2 class="fadeInDown wow">EXAMPLES OF WORK</h2>
 		  <li><a href="#"><img src="img/LembergGraf.jpg"/><span class="name">Lemberg Graf<span class="title">Website for restaurant</span></span></a></li>
 		  <li><a href="#"><img src="img/m-logo.svg"/><span class="name">My website <span class="title">Personal landing</span></span></a></li>
@@ -174,7 +180,7 @@
 		</div>
 	</footer>
 	<!-- Scripts -->
-	
+<div id="toTop"><img src="img/rocket.png"></div>
 <script src="deploy/js.js" ></script>
 </body>
 </html>
