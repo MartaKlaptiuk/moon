@@ -5,7 +5,7 @@ body{
 }
 /*Preloader start*/
 .loaderArea {
-  background: linear-gradient(90deg, #101A2A 10%, #0F2241 90%);
+  background: linear-gradient(90deg, #101A2A 10%, #320069 90%);
   overflow: hidden;
   position: fixed;
   left: 0;
@@ -998,3 +998,10 @@ form .field textarea.focused + label{
   width: 20%;
 }*/
 }
+@media( pointer: coarse) {
+.slider-wrapper{
+  display: none;
+  hover: none;
+}
+ }
+ 
